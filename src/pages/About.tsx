@@ -5,8 +5,8 @@ import { Brain, Rocket, Users, Code, Award, Globe } from 'lucide-react';
 const About = () => {
   const stats = [
     { label: 'Active Members', value: '100+' },
-    { label: 'Projects Completed', value: '50+' },
-    { label: 'Workshops Conducted', value: '30+' },
+    { label: 'Projects Completed', value: '10+' },
+    { label: 'Workshops Conducted', value: '20+' },
     { label: 'Research Papers', value: '10+' },
   ];
 
