@@ -33,7 +33,7 @@ const Blog = () => {
       excerpt: 'An AI Assistant that responds to users voice and finds data based on queries. Built with Flask, HTML, CSS, and JavaScript.',
       date: getRelativeDate(0),
       readTime: calculateReadTime('An AI Assistant that responds to users voice and finds data based on queries. Built with Flask, HTML, CSS, and JavaScript.'),
-      image: 'https://source.unsplash.com/random/800x600?ai',
+      image: '/projects/sirius-ai.png',
       category: 'AI Project',
       link: 'https://sirius-ai-liard.vercel.app/'
     },
