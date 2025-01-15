@@ -151,6 +151,117 @@ const Home = () => {
         </div>
       </section>
 
+      {/* What We Offer Section */}
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:50px_50px]" />
+        <div className="absolute inset-0 bg-noise opacity-20" />
+        <div className="absolute -top-1/3 left-2/3 -z-10 transform-gpu blur-3xl xl:left-1/2" aria-hidden="true">
+          <div
+            className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-purple-500 to-blue-500 opacity-20"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold">
+              What We <span className="text-purple-500">Offer</span>
+            </h2>
+            <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
+              Comprehensive learning opportunities to boost your AI journey
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Advanced Computing */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-purple-500/5 to-blue-500/5 px-8 py-10 backdrop-blur-sm ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-3xl transition duration-300 group-hover:bg-purple-500/10" />
+              <div className="relative">
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  Advanced <span className="text-purple-500">Computing</span>
+                </h3>
+                <p className="text-gray-400">
+                  Access to high-performance computing resources for AI model training
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Industry Projects */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-purple-500/5 to-blue-500/5 px-8 py-10 backdrop-blur-sm ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-3xl transition duration-300 group-hover:bg-purple-500/10" />
+              <div className="relative">
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  Industry <span className="text-purple-500">Projects</span>
+                </h3>
+                <p className="text-gray-400">
+                  Work on real projects with industry partners
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Innovation Hub */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-purple-500/5 to-blue-500/5 px-8 py-10 backdrop-blur-sm ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-3xl transition duration-300 group-hover:bg-purple-500/10" />
+              <div className="relative">
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  Innovation <span className="text-purple-500">Hub</span>
+                </h3>
+                <p className="text-gray-400">
+                  A space for creative exploration and breakthrough ideas
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Mentorship */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-purple-500/5 to-blue-500/5 px-8 py-10 backdrop-blur-sm ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-3xl transition duration-300 group-hover:bg-purple-500/10" />
+              <div className="relative">
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  <span className="text-purple-500">Mentorship</span>
+                </h3>
+                <p className="text-gray-400">
+                  Guidance from experienced professionals and researchers
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="relative py-32 bg-gradient-to-b from-black via-purple-900/10 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,6 +305,171 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Teams Section */}
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:50px_50px]" />
+        <div className="absolute inset-0 bg-noise opacity-20" />
+        <div className="absolute -top-1/3 left-2/3 -z-10 transform-gpu blur-3xl xl:left-1/2" aria-hidden="true">
+          <div
+            className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-purple-500 to-blue-500 opacity-20"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-4 glow-text">
+              Our Teams
+            </h2>
+            <p className="text-gray-400 mt-4 text-lg max-w-2xl mx-auto">
+              Specialized teams working together to push the boundaries of AI
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Technical Team */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.02 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-purple-500/5 to-blue-500/5 px-8 py-10 backdrop-blur-sm ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-3xl transition duration-300 group-hover:bg-purple-500/10" />
+              <div className="relative">
+                <h3 className="text-xl font-semibold leading-7 text-gradient-purple mb-3 text-4xl font-bold mb-4 glow-text">Technical Team</h3>
+                <p className="text-base leading-7 text-gray-400 mb-6">
+                  Developing cutting-edge AI/ML solutions and conducting research in emerging technologies.
+                </p>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Neural Networks</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Computer Vision</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Natural Language Processing</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Content Team */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ scale: 1.02 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-purple-500/5 to-blue-500/5 px-8 py-10 backdrop-blur-sm ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-3xl transition duration-300 group-hover:bg-purple-500/10" />
+              <div className="relative">
+                <h3 className="text-xl font-semibold leading-7 text-gradient-purple mb-3 text-4xl font-bold mb-4 glow-text">Content Team</h3>
+                <p className="text-base leading-7 text-gray-400 mb-6">
+                  Creating informative and engaging content about AI/ML concepts and latest developments.
+                </p>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Technical Blogs</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Social Media</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Documentation</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Media Team */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ scale: 1.02 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-purple-500/5 to-blue-500/5 px-8 py-10 backdrop-blur-sm ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-3xl transition duration-300 group-hover:bg-purple-500/10" />
+              <div className="relative">
+                <h3 className="text-xl font-semibold leading-7 text-gradient-purple mb-3 text-4xl font-bold mb-4 glow-text">Media Team</h3>
+                <p className="text-base leading-7 text-gray-400 mb-6">
+                  Capturing and showcasing our journey through various media formats.
+                </p>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Event Coverage</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Video Production</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Photography</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Design Team */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ scale: 1.02 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-purple-500/5 to-blue-500/5 px-8 py-10 backdrop-blur-sm ring-1 ring-white/10 hover:ring-white/20 transition-all duration-300"
+            >
+              <div className="absolute inset-0 rounded-3xl transition duration-300 group-hover:bg-purple-500/10" />
+              <div className="relative">
+                <h3 className="text-xl font-semibold leading-7 text-gradient-purple mb-3 text-4xl font-bold mb-4 glow-text">Design Team</h3>
+                <p className="text-base leading-7 text-gray-400 mb-6">
+                  Creating visually appealing designs and maintaining brand consistency.
+                </p>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">UI/UX Design</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Graphics</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="h-px flex-auto bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0" />
+                    <span className="text-sm font-medium">Branding</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
     </div>
   );
 };
