@@ -4,34 +4,37 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaInstagram, FaReact } from 'react-icons/fa';
 import { SiTensorflow } from 'react-icons/si';
+import logo from "../logo_white.png";
+import likith from "../assets/team/likith.png";
+import yusha from "../assets/team/yusha.jpg";
 
 const Footer = () => {
   const socialLinks = [
     {
       icon: <FaLinkedin className="w-6 h-6" />,
-      href: "https://www.linkedin.com/company/tensor-mvjce",
+      href: "https://www.linkedin.com/company/tensor-club",
       color: "hover:text-blue-500"
     },
     {
       icon: <FaGithub className="w-6 h-6" />,
-      href: "https://github.com/Tensor-Ai-Mvj",
+      href: "https://github.com/tensormvjce",
       color: "hover:text-gray-400"
     },
     {
       icon: <FaInstagram className="w-6 h-6" />,
-      href: "https://www.instagram.com/tensor_mvjce",
+      href: "https://www.instagram.com/tensor.mvjce",
       color: "hover:text-pink-500"
     }
   ];
 
   const teamMembers = [
     {
-      image: "./src/assets/team/likith.png",
+      image: likith,
       alt: "Likit",
       linkedin: "https://www.linkedin.com/in/likithyadavgn"
     },
     {
-      image: "./src/assets/team/yusha.jpg",
+      image: yusha,
       alt: "Yusha",
       linkedin: "https://www.linkedin.com/in/mohammad-yusha-718b26279"
     }
@@ -51,7 +54,7 @@ const Footer = () => {
               className="flex items-center space-x-2"
               whileHover={{ scale: 1.02 }}
             >
-              <img src="./src/logo_white.png" className="w-20 h-20" alt="Tensor Logo" />
+              <img src={logo} className="w-20 h-20" alt="Tensor Logo" />
             </motion.div>
             <div className="space-y-2 text-gray-300">
               <p className="font-medium">MVJ College of Engineering</p>
