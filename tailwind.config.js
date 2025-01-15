@@ -6,6 +6,7 @@ export default {
       animation: {
         'gradient': 'gradient 8s linear infinite',
         'float': 'float 6s ease-in-out infinite',
+        'spin-slow': 'spin 3s linear infinite',
       },
       keyframes: {
         gradient: {
@@ -23,6 +24,9 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      }
     },
   },
   plugins: [],

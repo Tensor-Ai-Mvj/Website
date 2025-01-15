@@ -5,6 +5,7 @@ import LoadingScreen from './components/LoadingScreen';
 import StarryNightTransition from './components/StarryNightTransition';
 import AppRoutes from './AppRoutes';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -64,6 +65,7 @@ function App() {
               <div className="min-h-screen text-white">
                 <AppRoutes />
               </div>
+              <Footer />
             </motion.div>
           )}
         </AnimatePresence>
