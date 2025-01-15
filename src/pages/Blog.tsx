@@ -42,7 +42,7 @@ const Blog = () => {
       excerpt: 'Exploring the latest breakthroughs in artificial intelligence and their impact on society.',
       date: getRelativeDate(1),
       readTime: calculateReadTime('Exploring the latest breakthroughs in artificial intelligence and their impact on society.'),
-      image: 'https://source.unsplash.com/random/800x600?ai',
+      image: 'https://www.logicraysacademy.com/blog/wp-content/uploads/2023/06/AIFI.png',
       category: 'AI Research'
     },
     {
@@ -50,7 +50,7 @@ const Blog = () => {
       excerpt: 'A comprehensive guide to implementing machine learning models effectively.',
       date: getRelativeDate(2),
       readTime: calculateReadTime('A comprehensive guide to implementing machine learning models effectively.'),
-      image: 'https://source.unsplash.com/random/800x600?machine-learning',
+      image: 'https://xiengineering.com/wp-content/uploads/2023/10/AdobeStock_519767884-1-scaled.jpeg',
       category: 'Machine Learning'
     },
     {
@@ -58,7 +58,7 @@ const Blog = () => {
       excerpt: 'Understanding the fundamentals of neural networks and deep learning.',
       date: getRelativeDate(3),
       readTime: calculateReadTime('Understanding the fundamentals of neural networks and deep learning.'),
-      image: 'https://source.unsplash.com/random/800x600?neural-network',
+      image: 'https://bernardmarr.com/img/What%20is%20an%20Artificial%20Neural%20Networks.jpg',
       category: 'Deep Learning'
     },
     {
@@ -66,7 +66,7 @@ const Blog = () => {
       excerpt: 'Best practices for organizing and managing data science projects effectively.',
       date: getRelativeDate(4),
       readTime: calculateReadTime('Best practices for organizing and managing data science projects effectively.'),
-      image: 'https://source.unsplash.com/random/800x600?data-science',
+      image: 'https://images.squarespace-cdn.com/content/v1/55fdfa38e4b07a55be8680a4/1615903072761-9H9XREOMPJFBGI8QAW1U/Data+Science+Workflow+Image.jpg',
       category: 'Data Science'
     },
     {
@@ -74,7 +74,7 @@ const Blog = () => {
       excerpt: 'A comprehensive guide to using Python for artificial intelligence development.',
       date: getRelativeDate(5),
       readTime: calculateReadTime('A comprehensive guide to using Python for artificial intelligence development.'),
-      image: 'https://source.unsplash.com/random/800x600?python-coding',
+      image: 'https://www.developernation.net/static/83ec9004ebaf342559098782a7b24598/a764f/Python-for-AI-ML-projects_cover-scaled.jpg',
       category: 'Programming'
     },
     {
@@ -82,7 +82,7 @@ const Blog = () => {
       excerpt: 'Exploring the ethical considerations in artificial intelligence development.',
       date: getRelativeDate(6),
       readTime: calculateReadTime('Exploring the ethical considerations in artificial intelligence development.'),
-      image: 'https://source.unsplash.com/random/800x600?ai-ethics',
+      image: 'https://media.licdn.com/dms/image/C4D12AQFsGnGLkGWzJg/article-cover_image-shrink_600_2000/0/1598527219209?e=2147483647&v=beta&t=x0tBbn-g623Dq5vvsc9ufZbAlIDIRWCWQGymRy_C44g',
       category: 'AI Ethics'
     },
     {
@@ -90,7 +90,7 @@ const Blog = () => {
       excerpt: 'Comparing popular deep learning frameworks and their use cases.',
       date: getRelativeDate(7),
       readTime: calculateReadTime('Comparing popular deep learning frameworks and their use cases.'),
-      image: 'https://source.unsplash.com/random/800x600?deep-learning',
+      image: 'https://analyticsindiamag.com/wp-content/uploads/2018/04/all_libraries.png',
       category: 'Deep Learning'
     }
   ];
