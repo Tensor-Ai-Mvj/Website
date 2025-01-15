@@ -85,13 +85,15 @@ const Home = () => {
               Empowering students to explore, innovate, and excel in the world of Artificial Intelligence
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/50 rounded-lg font-semibold text-lg hover-glow terminal-text"
-              >
-                Join Our Club
-              </motion.button>
+            <Link to="/join">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/50 rounded-lg font-semibold text-lg hover-glow terminal-text"
+                >
+                  Join Our Club
+                </motion.button>
+              </Link>
               <Link to="/blog">
                 <motion.button
                   whileHover={{ scale: 1.05 }}

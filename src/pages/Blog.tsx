@@ -1,34 +1,106 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 const Blog = () => {
-  const blogPosts = [
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const [visiblePosts, setVisiblePosts] = useState(3);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 60000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const getRelativeDate = (daysAgo: number) => {
+    const date = new Date(currentTime);
+    date.setDate(date.getDate() - daysAgo);
+    return date.toISOString().split('T')[0];
+  };
+
+  const calculateReadTime = (text: string) => {
+    const wordsPerMinute = 200;
+    const words = text.split(/\s+/).length;
+    const minutes = Math.ceil(words / wordsPerMinute);
+    return `${minutes} min read`;
+  };
+
+  const allBlogPosts = [
+    {
+      title: 'Sirius AI Assistant',
+      excerpt: 'An AI Assistant that responds to users voice and finds data based on queries. Built with Flask, HTML, CSS, and JavaScript.',
+      date: getRelativeDate(0),
+      readTime: calculateReadTime('An AI Assistant that responds to users voice and finds data based on queries. Built with Flask, HTML, CSS, and JavaScript.'),
+      image: 'https://source.unsplash.com/random/800x600?ai',
+      category: 'AI Project',
+      link: 'https://sirius-ai-liard.vercel.app/'
+    },
     {
       title: 'The Future of AI in 2025',
       excerpt: 'Exploring the latest breakthroughs in artificial intelligence and their impact on society.',
-      date: '2025-01-15',
-      readTime: '5 min read',
-      image: '/blog/ai-future.jpg',
+      date: getRelativeDate(1),
+      readTime: calculateReadTime('Exploring the latest breakthroughs in artificial intelligence and their impact on society.'),
+      image: 'https://source.unsplash.com/random/800x600?ai',
       category: 'AI Research'
     },
     {
       title: 'Machine Learning Best Practices',
       excerpt: 'A comprehensive guide to implementing machine learning models effectively.',
-      date: '2025-01-10',
-      readTime: '8 min read',
-      image: '/blog/ml-practices.jpg',
+      date: getRelativeDate(2),
+      readTime: calculateReadTime('A comprehensive guide to implementing machine learning models effectively.'),
+      image: 'https://source.unsplash.com/random/800x600?machine-learning',
       category: 'Machine Learning'
     },
     {
       title: 'Neural Networks Explained',
       excerpt: 'Understanding the fundamentals of neural networks and deep learning.',
-      date: '2025-01-05',
-      readTime: '6 min read',
-      image: '/blog/neural-networks.jpg',
+      date: getRelativeDate(3),
+      readTime: calculateReadTime('Understanding the fundamentals of neural networks and deep learning.'),
+      image: 'https://source.unsplash.com/random/800x600?neural-network',
+      category: 'Deep Learning'
+    },
+    {
+      title: 'Data Science Workflows',
+      excerpt: 'Best practices for organizing and managing data science projects effectively.',
+      date: getRelativeDate(4),
+      readTime: calculateReadTime('Best practices for organizing and managing data science projects effectively.'),
+      image: 'https://source.unsplash.com/random/800x600?data-science',
+      category: 'Data Science'
+    },
+    {
+      title: 'Python for AI Development',
+      excerpt: 'A comprehensive guide to using Python for artificial intelligence development.',
+      date: getRelativeDate(5),
+      readTime: calculateReadTime('A comprehensive guide to using Python for artificial intelligence development.'),
+      image: 'https://source.unsplash.com/random/800x600?python-coding',
+      category: 'Programming'
+    },
+    {
+      title: 'Ethics in AI',
+      excerpt: 'Exploring the ethical considerations in artificial intelligence development.',
+      date: getRelativeDate(6),
+      readTime: calculateReadTime('Exploring the ethical considerations in artificial intelligence development.'),
+      image: 'https://source.unsplash.com/random/800x600?ai-ethics',
+      category: 'AI Ethics'
+    },
+    {
+      title: 'Deep Learning Frameworks',
+      excerpt: 'Comparing popular deep learning frameworks and their use cases.',
+      date: getRelativeDate(7),
+      readTime: calculateReadTime('Comparing popular deep learning frameworks and their use cases.'),
+      image: 'https://source.unsplash.com/random/800x600?deep-learning',
       category: 'Deep Learning'
     }
   ];
+
+  const handleLoadMore = () => {
+    setVisiblePosts(prev => Math.min(prev + 3, allBlogPosts.length));
+  };
+
+  const visibleBlogPosts = allBlogPosts.slice(0, visiblePosts);
+  const hasMorePosts = visiblePosts < allBlogPosts.length;
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
@@ -56,13 +128,14 @@ const Blog = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post, index) => (
+          {visibleBlogPosts.map((post, index) => (
             <motion.article
               key={post.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 + 0.5 }}
               className="relative group cursor-pointer"
+              onClick={() => post.link && window.open(post.link, '_blank')}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative p-6 bg-black/50 backdrop-blur-sm border border-gray-800 rounded-lg hover-glow">
@@ -102,16 +175,21 @@ const Blog = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="text-center mt-16"
-        >
-          <button className="px-8 py-4 border border-purple-500/50 hover:border-purple-500 rounded hover-glow terminal-text transition-colors">
-            Load More Articles
-          </button>
-        </motion.div>
+        {hasMorePosts && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="text-center mt-16"
+          >
+            <button 
+              onClick={handleLoadMore}
+              className="px-8 py-4 border border-purple-500/50 hover:border-purple-500 rounded hover-glow terminal-text transition-colors"
+            >
+              Load More Articles
+            </button>
+          </motion.div>
+        )}
       </div>
     </div>
   );
